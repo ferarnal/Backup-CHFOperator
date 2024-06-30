@@ -1,0 +1,17 @@
+apiVersion: backupchfoperator.backup-operator-domain/v1
+kind: BackupCHFOperator
+metadata:
+  labels:
+    app.kubernetes.io/name: backup-project
+    app.kubernetes.io/managed-by: kustomize
+  name: backupchfoperator-sample
+spec:
+  command: "!/bin/sh"
+  args:
+    - "/opt/SIU/bin/assetstoretool"
+    - "exportRepository"
+    - "-N"
+    - "\\CHFStudio"
+    - "-z"
+    - "/mnt/data/"
+  interval: 30

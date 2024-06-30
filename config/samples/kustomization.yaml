@@ -1,0 +1,7 @@
+## Append samples of your project ##
+resources:
+- backup_v1_backup-chfoperator.yaml
+- backup-chfoperator_v1_backup-chfoperator.yaml
+- backupchfoperator_v1_backup-chfoperator.yaml
+- backupchfoperator_v1_backupchfoperator.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

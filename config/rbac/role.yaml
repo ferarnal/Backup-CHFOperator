@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - backupchfoperator.backup-operator-domain
+  resources:
+  - backupchfoperators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - backupchfoperator.backup-operator-domain
+  resources:
+  - backupchfoperators/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - backupchfoperator.backup-operator-domain
+  resources:
+  - backupchfoperators/status
+  verbs:
+  - get
+  - patch
+  - update
